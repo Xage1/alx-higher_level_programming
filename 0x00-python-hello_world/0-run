@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#check if the enviroment variable is set
+
+if [ -z "$PYFILE" ]; then
+echo "Error: The enviroment variable \$PYFILE is not set."
+exit 1
+
+fi
+
+# Check if the specified Python file exists
+
+if [ ! -f "$PYFILE" ]; then
+echo "Error: The specified Python file '$PYFILE' does not exist."
+exit 1
+
+fi
+
+python3 "$PYFILE"
