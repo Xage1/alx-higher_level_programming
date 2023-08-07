@@ -1,9 +1,20 @@
 #!/bin/bash
 
+# Check if the $PYCODE environment variable is set
 if [ -z "$PYCODE" ]; then
-echo "Error: The enviroment variable \$PYCODE is not set."
+echo "Error: The environment variable \$PYCODE is not set."
 exit 1
-
 fi
 
-python3 -c "$PYCODE"
+# Create a temporary Python script file with the provided code
+TMP_FILE=$(mktemp)
+echo '#!/usr/bin/python3' > "$TMP_FILE"
+echo "$PYCODE" >> "$TMP_FILE"
+
+# Make the temporary script file executable and run it
+chmod +x "$TMP_FILE"
+"$TMP_FILE"
+
+# Clean up the temporary file
+rm "$TMP_FILE"
+
