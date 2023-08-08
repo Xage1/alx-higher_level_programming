@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-for char in range(ord('a'), ord('z') + 1):
-    if chr(char) != 'q' and chr(char) != 'e':
-        print(chr(char), end="")
+for n in range (0, 26):
+    if n != 4 and n != 16:
+        print(f"{chr(ord('a') + n)}", end="")
