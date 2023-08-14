@@ -1,16 +1,31 @@
 #!/usr/bin/python3
+import sys
+from calculator_1 import add, sub, mul, div
+
 if __name__ == "__main__":
-    from calculator_1 import add, sub, mul, div
-    import sys
-    if len(sys.argv) - 1 != 3:
-        print("Usage: ./100-calculator.py <a> <operator> <b>")
+    if len(sys.argv) != 4:
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
 
-        ops = {"+": add, "-": sub, "*": mul, "/": div}
-        if sys.argv[2] not in list(ops.keys()):
-            print("Unknown operator. Availabe operators: +, -, * and /")
-            sys.exit(1)
+    a = int(sys.argv[1])
+    operator = sys.argv[2]
+    b = int(sys.argv[3])
 
-            a = int(sys.argv[1])
-            b = int (sys.argv[3])
-            print("{} {} {} = {}".format(a, sys.argv[2], b, ops[sys.argv[2]](a, b)))
+    if operator not in ("+", "-", "*", "/"):
+        print("Unknown operator. Available operators: +, -, * and /")
+        sys.exit(1)
+
+    if operator == "+":
+        result = add(a, b)
+    elif operator == "-":
+        result = sub(a, b)
+    elif operator == "*":
+        result = mul(a, b)
+    elif operator == "/":
+        if b == 0:
+            print("Error: Division by zero is not allowed.")
+            sys.exit(1)
+        result = div(a, b)
+
+    print(f"{a} {operator} {b} = {result}")
+
