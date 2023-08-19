@@ -1,3 +1,7 @@
 #!/usr/bin/python3
+
+output = ""
 for n in range(0, 26):
-    print(f"{chr(ord('a') + n)}", end="")
+    output += "{}".format(chr(ord('a') + n))
+
+print(output, end="")
