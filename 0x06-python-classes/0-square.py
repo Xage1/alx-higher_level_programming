@@ -1,9 +1,7 @@
 #!/usr/bin/python3
+"""Define a class Square."""
+
+
 class Square:
-
-    """
-    This class represents a square.
-
-    A square is a four-sided polygon with all sides of equal length and all angles right angles.
-    """
+    """Represent a square."""
     pass
