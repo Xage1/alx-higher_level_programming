@@ -14,29 +14,29 @@ Validate cases:
 	 Traceback (most recent call last):
   	 ...
 	 TypeError: last_name must be a string
-	 >>> say_my_name(12,"Lopez")
+	 >>> say_my_name(12,"Muketha")
 	 Traceback (most recent call last):
   	 ...
 	 TypeError: first_name must be a string
-	 >>> say_my_name("Juan", [1,2])
+	 >>> say_my_name("Kenneth", [1,2])
 	 Traceback (most recent call last):
  	 ...
 	 TypeError: last_name must be a string
-	 >>> say_my_name("Juan")
+	 >>> say_my_name("Kenneth")
 	 Juan 
-	 >>> say_my_name("Juan","lopez","Sanchez")
+	 >>> say_my_name("Kenneth","Muketha")
 	 Traceback (most recent call last):
   	 ...
 	 TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
-	 >>> say_my_name("Juan",5j)
+	 >>> say_my_name("Kenneth",5j)
 	 Traceback (most recent call last):
   	 ...
 	 TypeError: last_name must be a string
-	 >>> say_my_name("Juan", (1,2))
+	 >>> say_my_name("Kenneth", (1,2))
 	 Traceback (most recent call last):
  	 ...
 	 TypeError: last_name must be a string
-	 >>> say_my_name("Juan", {1:2})
+	 >>> say_my_name("Kenneth", {1:2})
 	 Traceback (most recent call last):
  	 ...
 	 TypeError: last_name must be a string
