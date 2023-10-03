@@ -1,4 +1,10 @@
 #!/usr/bin/python3
 def is_same_class(obj, a_class):
-    """Check if te object is exxactly an instance of the specified class."""
-    return type(obj) is a_class
+    """
+    Function that returns True if the object is exactly an
+    instance of the specified class ; otherwise False
+    """
+    if type(obj) is a_class:
+        return True
+    else:
+        return False

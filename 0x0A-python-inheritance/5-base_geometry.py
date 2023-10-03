@@ -1,4 +1,6 @@
 #!/usr/bin/python3
 class BaseGeometry:
-    """Empty class representing base geometry ."""
+    """
+    Function Empty class BaseGeometry.
+    """
     pass
