@@ -1,52 +1,22 @@
 #!/usr/bin/python3
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+"""
+Contains the class BaseGeometry and subclass Rectangle
+"""
 
-
-class Rectangle(BaseGeometry):
-    """
-     class Rectangle that inherits from BaseGeometry
-    """
-    def __init__(self, width, height):
-        """
-        constructor of class Rectangle
-        """
-        self.__width = width
-        self.__height = height
-        super().integer_validator("width", width)
-        super().integer_validator("height", height)
-
-    def __str__(self):
-        """
-        define str print a string unofficial
-        """
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
-
-    def area(self):
-        """
-        Area of Rectangle
-        """
-        return self.__width * self.__height
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
+    """A representation of a square class
+        Args:
+            size: size of square
     """
-    class Square that inherits from Rectangle
-    """
-
     def __init__(self, size):
-        """
-        constructor of class Square
-        """
+        """instantiation of the square"""
+        self.integer_validator("size", size)
         self.__size = size
+        super().__init__(size, size)
 
     def area(self):
-        """
-        Area of the Square
-        """
-        return self.__size * self.__size
-
-    def __str__(self):
-        """
-        define str print a string unofficial
-        """
-        return "[Rectangle] {}/{}".format(self.__size, self.__size)
+        """"returns the area of the square"""
+        return self.__size ** 2
